@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="vertical"
+	width="500" height="250"
+	defaultButton="{submitButton}"
+	creationComplete="initValidators()" 
+	>
+	
+	<mx:Panel title="Log in with validators!">
+		<mx:Form>
+			<mx:FormItem label="Email:">
+				<mx:TextInput id="emailInput" change="validateAll()"/>
+			</mx:FormItem>
+			<mx:FormItem label="Password:">
+				<mx:TextInput id="passwordInput" displayAsPassword="true" change="validateAll()"/>
+			</mx:FormItem>
+		</mx:Form>
+	
+		<mx:ControlBar horizontalAlign="center">
+	            <mx:Button 
+	                id="submitButton"
+	                label="Log in"
+	                enabled="{formIsValid}"
+	                click="logIn()" 
+	            />
+	        </mx:ControlBar>		
+	</mx:Panel>
+	
+	<mx:EmailValidator id="emailValidator" source="{emailInput}" property="text"/>
+	<mx:StringValidator id="passwordValidator" source="{passwordInput}" property="text" minLength="5"/>
+	
+    <mx:Script>
+    	<![CDATA[
+    		import mx.validators.Validator;
+    		import mx.controls.Alert;
+    		import mx.collections.ArrayCollection;
+    		
+    		[Bindable]
+    		private var formIsValid:Boolean = false;
+    		
+    		private var validators:Array;
+    		
+    		private function logIn() : void{
+    			Alert.show("Congratulatore!\nThat was such a successful log in!", "El Successo");
+    		}
+    		
+    		private function validateAll() : void{
+    			var errors:Array = Validator.validateAll(validators);
+    			formIsValid = errors.length == 0;
+    		}
+    		
+    		private function initValidators() : void{
+    			validators = [emailValidator, passwordValidator];
+    		}
+    		        		
+    	]]>
+    </mx:Script>
+</mx:Application>
