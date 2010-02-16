@@ -29,6 +29,7 @@
             </mx:AddChild>
             <mx:SetProperty target="{loginPanel}" name="title" value="Register"/>
             <mx:SetProperty target="{submitButton}" name="label" value="Register"/>
+            <mx:SetEventHandler target="{submitButton}" name="click" handler="register()"/>
             <mx:SetStyle target="{submitButton}" name="color" value="blue"/>
             <mx:RemoveChild target="{registerLink}"/>
             <mx:AddChild relativeTo="{spacer1}" position="before">
