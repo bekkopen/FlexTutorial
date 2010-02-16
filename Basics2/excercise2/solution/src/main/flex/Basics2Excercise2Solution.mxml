@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" 
+	width="550" height="400"
+	>
+	
+	<!-- Define one view state, in addition to the base state.-->
+    <mx:states>
+        <mx:State name="Register">
+            <mx:AddChild relativeTo="{loginForm}" position="firstChild">
+                <mx:target>
+                    <mx:FormItem id="lastName" label="Last name:">
+                        <mx:TextInput/>
+                    </mx:FormItem>
+                </mx:target>
+            </mx:AddChild>
+            <mx:AddChild relativeTo="{loginForm}" position="firstChild">
+                <mx:target>
+                    <mx:FormItem id="firstName" label="First name:">
+                        <mx:TextInput/>
+                    </mx:FormItem>
+                </mx:target>
+            </mx:AddChild>
+            <mx:AddChild relativeTo="{loginForm}" position="lastChild">
+                <mx:target>
+                    <mx:FormItem id="confirm" label="Confirm:" >
+                        <mx:TextInput displayAsPassword="true"  />
+                    </mx:FormItem>
+                </mx:target>
+            </mx:AddChild>
+            <mx:SetProperty target="{loginPanel}" name="title" value="Register"/>
+            <mx:SetProperty target="{submitButton}" name="label" value="Register"/>
+            <mx:SetStyle target="{submitButton}" name="color" value="blue"/>
+            <mx:RemoveChild target="{registerLink}"/>
+            <mx:AddChild relativeTo="{spacer1}" position="before">
+                <mx:target>
+                    <mx:LinkButton id="loginLink" label="Return to Login" click="currentState=''"/>
+                </mx:target>
+            </mx:AddChild>
+        </mx:State>
+    </mx:states>
+	
+	<mx:Panel title="Log in" id="loginPanel">
+		<mx:Form id="loginForm">
+			<mx:FormItem label="Email:">
+				<mx:TextInput id="emailInput" />
+			</mx:FormItem>
+			<mx:FormItem label="Password:">
+				<mx:TextInput id="passwordInput" displayAsPassword="true"/>
+			</mx:FormItem>
+		</mx:Form>
+	
+		<mx:ControlBar horizontalAlign="center">
+				<mx:LinkButton 
+					id="registerLink"  
+					label="Need to Register?"
+                	click="currentState='Register'"
+                	/>
+            	<mx:Spacer width="100%" id="spacer1"/>
+	            <mx:Button 
+	                id="submitButton"
+	                label="Log in"
+	            />
+	        </mx:ControlBar>		
+	</mx:Panel>
+	
+    <mx:Script>
+    	<![CDATA[
+    		import mx.controls.Alert;
+    		
+    		private function register() : void{
+    			Alert.show("Congratulatore!\nYou just created a new user!", "El Successo");
+    		}
+    		
+    		        		
+    	]]>
+    </mx:Script>
+</mx:Application>
