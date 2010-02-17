@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/halo" minWidth="1024" minHeight="768" xmlns:domain="no.bekk.ria.exercise2.domain.*" xmlns:ria="no.bekk.ria.*">
+	<fx:Declarations>
+		<s:ArrayCollection id="contacts">
+			<ria:Contact name="Ole Christian Langfjæran" number="98219000" sex="Male" />
+			<ria:Contact name="Christian H. Mosveen" number="98219007" sex="Male" />
+			<ria:Contact name="Jenny Skavlan" number="98219006" sex="Female" />
+			<ria:Contact name="Mikael Vik" number="98219009" sex="Male" />
+		</s:ArrayCollection>
+	</fx:Declarations>
+	
+	<fx:Script>
+		<![CDATA[
+			import no.bekk.ria.Contact;
+			
+			private function saveContact(e :MouseEvent) :void
+			{
+				var name :String = nameInput.text;
+				var number :String = numberInput.text;
+				var sex :String = sexInput.selectedItem.label;
+				
+				if (name != null && number != null && sex != null)
+				{
+					var contact :Contact = new Contact();
+					contact.name = name;
+					contact.number = number;
+					contact.sex = sex;
+					contacts.addItem(contact);
+				}
+			}
+			
+			private function clearFields(e :MouseEvent) :void
+			{
+				contactList.selectedItem = null;
+				sexInput.selectedItem = null;
+				nameInput.text = null;
+				numberInput.text = null;
+			}
+			
+			private function changeSexHandler(e :Event) :void
+			{
+				var contact :Contact = contactList.selectedItem as Contact;
+				
+				if (contact != null)
+				{
+					var sex :String = sexInput.selectedItem.label;
+					if (sex != null)
+					{
+						contact.sex = sex;
+					}
+				}
+			}
+		]]>
+	</fx:Script>
+	
+	<s:HGroup width="100%" height="100%">
+		<s:Panel width="100%" height="100%" title="Contacts">
+			<s:List id="contactList" dataProvider="{contacts}" itemRenderer="no.bekk.ria.ContactItemRenderer" width="100%" height="100%" />
+		</s:Panel>
+		
+		<s:Panel width="100%" height="100%" title="New contact">
+			<s:VGroup width="100%" height="100%" horizontalAlign="center" paddingTop="10">
+				<s:HGroup>
+					<s:Label text="Name" width="100" />
+					<s:TextInput id="nameInput" width="200" text="@{contactList.selectedItem.name}" />
+				</s:HGroup>
+				<s:HGroup>
+					<s:Label text="Number" width="100" />
+					<s:TextInput id="numberInput" width="200" text="@{contactList.selectedItem.number}"/>
+				</s:HGroup>
+				<s:HGroup>
+					<s:Label text="Sex" width="100" />
+					<s:DropDownList id="sexInput" width="200" selectedIndex="{contactList.selectedItem.sex == 'Male' ? 0 : 1}" change="changeSexHandler(event)">
+						<s:ArrayCollection>
+							<fx:Object data="0" label="Male" />
+							<fx:Object data="1" label="Female" />							
+						</s:ArrayCollection>
+					</s:DropDownList>
+				</s:HGroup>
+				<s:HGroup verticalAlign="middle" height="70">
+					<s:Button label="Save" click="saveContact(event)" visible="{contactList.selectedItem == null}" includeInLayout="{contactList.selectedItem == null}"/>
+					<s:Button label="Clear" click="clearFields(event)" visible="{contactList.selectedItem != null}" includeInLayout="{contactList.selectedItem != null}"/>
+				</s:HGroup>
+			</s:VGroup>
+		</s:Panel>
+	</s:HGroup>
+</s:Application>
