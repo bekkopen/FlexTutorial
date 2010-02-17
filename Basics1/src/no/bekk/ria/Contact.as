@@ -1,4 +1,4 @@
-package no.bekk.ria.exercise2.domain
+package no.bekk.ria
 {
 	public class Contact
 	{

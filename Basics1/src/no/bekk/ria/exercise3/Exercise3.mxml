@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
 			   xmlns:s="library://ns.adobe.com/flex/spark" 
-			   xmlns:mx="library://ns.adobe.com/flex/halo" minWidth="1024" minHeight="768" xmlns:domain="no.bekk.ria.exercise2.domain.*">
+			   xmlns:mx="library://ns.adobe.com/flex/halo" minWidth="1024" minHeight="768" xmlns:domain="no.bekk.ria.exercise2.domain.*" xmlns:ria="no.bekk.ria.*">
 	<fx:Declarations>
 		<s:ArrayCollection id="contacts">
-			<domain:Contact name="Ole Christian Langfjæran" number="98219000" sex="Male" />
-			<domain:Contact name="Christian H. Mosveen" number="98219007" sex="Male" />
-			<domain:Contact name="Jenny Skavlan" number="98219006" sex="Female" />
-			<domain:Contact name="Mikael Vik" number="98219009" sex="Male" />
+			<ria:Contact name="Ole Christian Langfjæran" number="98219000" sex="Male" />
+			<ria:Contact name="Christian H. Mosveen" number="98219007" sex="Male" />
+			<ria:Contact name="Jenny Skavlan" number="98219006" sex="Female" />
+			<ria:Contact name="Mikael Vik" number="98219009" sex="Male" />
 		</s:ArrayCollection>
 	</fx:Declarations>
 	
 	<s:HGroup width="100%" height="100%">
 		<s:Panel width="100%" height="100%" title="Contacts">
-			<s:List dataProvider="{contacts}" itemRenderer="no.bekk.ria.exercise3.views.ContactItemRenderer" width="100%" height="100%"/>
+			<s:List dataProvider="{contacts}" itemRenderer="no.bekk.ria.ContactItemRenderer" width="100%" height="100%"/>
 		</s:Panel>
 		
 		<s:Panel width="100%" height="100%" title="New contact">
