@@ -1,5 +1,6 @@
-package no.bekk.ria.exercise2.domain
+package no.bekk.ria
 {
+	[Bindable]
 	public class Contact
 	{
 		public var name :String;
