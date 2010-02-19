@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>no.bekk.flextutorial.basics2</groupId>
-    <artifactId>excercise3-solution</artifactId>
+    <artifactId>excercise4-solution</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>swf</packaging>
 
@@ -19,7 +19,7 @@
                 <version>3.5.0</version>
                 <extensions>true</extensions>
                 <configuration>
-                    <sourceFile>Basics2Excercise3Solution.mxml</sourceFile>
+                    <sourceFile>Basics2Excercise4Solution.mxml</sourceFile>
                 </configuration>
                 <dependencies>
                     <dependency>
@@ -49,6 +49,7 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+    
     <!-- REPOS -->
     <repositories>
         <repository>

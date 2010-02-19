@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<mx:Panel xmlns:mx="http://www.adobe.com/2006/mxml"
+    defaultButton="{submitButton}"
+    title="Log in">
+
+    <mx:Metadata>
+        [Event(name="doLogin", type="flash.events.Event")]
+    </mx:Metadata>
+
+    <mx:Form id="loginForm">
+        <mx:FormItem label="Email:">
+            <mx:TextInput id="emailInput" />
+        </mx:FormItem>
+        <mx:FormItem label="Password:">
+            <mx:TextInput id="passwordInput" displayAsPassword="true"/>
+        </mx:FormItem>
+    </mx:Form>
+
+    <mx:ControlBar horizontalAlign="right">
+        <mx:Button id="submitButton" label="Log in" click="logIn()"/>
+    </mx:ControlBar>
+
+    <mx:Script><![CDATA[
+        private function logIn() : void{
+            dispatchEvent(new Event("doLogin"));            
+        }
+]]></mx:Script>
+</mx:Panel>
