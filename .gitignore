@@ -1,4 +1,5 @@
 .*
+target
 !.gitignore
 bin-debug
 html-template
