@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <mx:Panel
         xmlns:mx="http://www.adobe.com/2006/mxml"
-        title="Congratulations you're logged in!">
+        title="Congratulations you're logged in!" xmlns:boxes="views.boxes.*">
 
     <mx:Metadata>
         [Event(name="doLogout", type="flash.events.Event")]
@@ -11,6 +11,10 @@
     <mx:Text height="100%" width="100%"
              text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
             />
+    <mx:Tile direction="horizontal" tileHeight="250" tileWidth="300" >
+    	<boxes:CompanyMessagesPanel width="100%" height="100%"/>
+    	<boxes:DeathStar width="100%" height="100%"/>
+    </mx:Tile>
     <mx:ControlBar width="100%" horizontalAlign="right">
         <mx:Button label="Logout" click="logout()"/>
     </mx:ControlBar>
