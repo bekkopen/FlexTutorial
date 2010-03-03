@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Panel xmlns:mx="http://www.adobe.com/2006/mxml" layout="vertical"
+	title="Messages">
+	<mx:Model id="messages">
+      <messages>
+        <message label="Darth Vader says easter's off"/>
+        <message label="Cantina is out of Banta milk"/>
+        <message label="The emperor comes next Thursday."/>
+        <message label="The Empire rulez!"/>
+      </messages>
+    </mx:Model>
+
+	<mx:List width="100%" dataProvider="{messages.message}"/>
+</mx:Panel>
