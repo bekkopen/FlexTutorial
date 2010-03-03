@@ -6,14 +6,13 @@
                 horizontalAlign="center"
         		xmlns:boxes="views.boxes.*">
 
-	<mx:Panel title="Congratulations you're logged in!" >
+	<mx:Panel title="Congratulations you're logged in!" width="100%" height="100%">
 
-	    <mx:Tile direction="horizontal" tileHeight="230" tileWidth="300" >
-	    	<boxes:LorumTextPanel width="100%" height="100%" />
-	    	<boxes:CompanyMessagesPanel width="100%" height="100%"/>
-	    	<boxes:DeathStar width="100%" height="100%"/>
-	    	<boxes:SomeGraphPic width="100%" height="100%"/>
-	    </mx:Tile>
+    	<boxes:LorumTextPanel width="100%" height="100%" />
+    	<boxes:CompanyMessagesPanel width="100%" height="100%"/>
+    	<boxes:DeathStar width="100%" height="100%"/>
+    	<boxes:SomeGraphPic width="100%" height="100%"/>
+    	
 	    <mx:ControlBar width="100%" horizontalAlign="right">
 	        <mx:Button label="Logout" click="logout()"/>
 	    </mx:ControlBar>
