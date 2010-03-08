@@ -8,10 +8,10 @@
 	<mx:Panel title="Log in with validators!">
 		<mx:Form>
 			<mx:FormItem label="Email:">
-				<mx:TextInput id="emailInput" change="validateAll()"/>
+				<mx:TextInput id="emailInput" /><!--Add changeListener here that does validateAll() -->
 			</mx:FormItem>
 			<mx:FormItem label="Password:">
-				<mx:TextInput id="passwordInput" displayAsPassword="true" change="validateAll()"/>
+				<mx:TextInput id="passwordInput" displayAsPassword="true" /><!--Add changeListener here that does validateAll() -->
 			</mx:FormItem>
 		</mx:Form>
 	
@@ -24,9 +24,6 @@
 	            />
 	        </mx:ControlBar>		
 	</mx:Panel>
-	
-	<mx:EmailValidator id="emailValidator" source="{emailInput}" property="text"/>
-	<mx:StringValidator id="passwordValidator" source="{passwordInput}" property="text" minLength="5"/>
 	
     <mx:Script>
     	<![CDATA[
@@ -49,7 +46,8 @@
     		}
     		
     		private function initValidators() : void{
-    			validators = [emailValidator, passwordValidator];
+    			// Uncomment this when created validators
+    			//validators = [emailValidator, passwordValidator];
     		}
     		        		
     	]]>
