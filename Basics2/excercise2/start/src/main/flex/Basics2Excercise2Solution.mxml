@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" 
+	width="550" height="400"
+	xmlns:local="*">
+	
+	<!-- Define one view state, in addition to the base state.-->
+  
+	<mx:Panel title="Welcome to the Empire">
+		<mx:Label text="We offer the best healt care plan in the galaxy!"/>
+		<mx:ControlBar horizontalAlign="center">
+	            <mx:Button label="Show Commercial" click="currentState=''"/>
+	    </mx:ControlBar>		
+	</mx:Panel>
+	
+    <local:VaderCommercial id="vaderCommercial" click="currentState='moreInfo'"/>
+</mx:Application>

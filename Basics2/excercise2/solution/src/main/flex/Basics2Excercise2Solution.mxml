@@ -21,16 +21,4 @@
     </mx:states>
     
     <local:VaderCommercial id="vaderCommercial" click="currentState='moreInfo'"/>
-	
-    <mx:Script>
-    	<![CDATA[
-    		import mx.controls.Alert;
-    		
-    		private function register() : void{
-    			Alert.show("Congratulatore!\nYou just created a new user!", "El Successo");
-    		}
-    		
-    		        		
-    	]]>
-    </mx:Script>
 </mx:Application>
