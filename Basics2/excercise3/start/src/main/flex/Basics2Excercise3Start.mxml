@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application 
+	xmlns:mx="http://www.adobe.com/2006/mxml"
+	width="550" height="400"
+    horizontalScrollPolicy="off"
+    xmlns:views="views.*"
+    horizontalAlign="center"
+	>
+
+    <views:LoginForm id="loginForm" doLogin="showLoggedInPane()" height="230" width="320"/>
+    <views:LoggedInPane id="loginPane" doLogout="showLoginForm()" height="100%" width="100%"/>
+
+    <mx:Script>
+    <![CDATA[
+        private function showLoggedInPane() : void{
+            
+        }
+
+		private function showLoginForm() : void{
+		}
+
+    ]]>
+    </mx:Script>
+
+</mx:Application>
