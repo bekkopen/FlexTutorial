@@ -57,18 +57,18 @@
 	
 	<s:HGroup width="100%" height="100%">
 		<s:Panel width="100%" height="100%" title="Contacts">
-			<s:List id="contactList" dataProvider="{contacts}" itemRenderer="no.bekk.ria.ContactItemRenderer" width="100%" height="100%" />
+			<s:List id="contactList" dataProvider="{contacts}" itemRenderer="no.bekk.ria.solutions.ContactItemRenderer" width="100%" height="100%" />
 		</s:Panel>
 		
 		<s:Panel width="100%" height="100%" title="New contact">
 			<s:VGroup width="100%" height="100%" horizontalAlign="center" paddingTop="10">
 				<s:HGroup>
 					<s:Label text="Name" width="100" />
-					<s:TextInput id="nameInput" width="200" text="@{contactList.selectedItem.name}" />
+					<s:TextInput id="nameInput" width="200" /><!-- EXERCISE: Add bi-directional binding to the contact's name -->
 				</s:HGroup>
 				<s:HGroup>
 					<s:Label text="Number" width="100" />
-					<s:TextInput id="numberInput" width="200" text="@{contactList.selectedItem.number}"/>
+					<s:TextInput id="numberInput" width="200" /><!-- EXERCISE: Add bi-directional binding to the contact's number -->
 				</s:HGroup>
 				<s:HGroup>
 					<s:Label text="Sex" width="100" />

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:ItemRenderer xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				xmlns:s="library://ns.adobe.com/flex/spark" 
+				xmlns:mx="library://ns.adobe.com/flex/halo" width="100%" height="60">
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	
+	<fx:Script>
+		<![CDATA[
+			import no.bekk.ria.Contact;
+			
+			import spark.components.List;
+			
+			[Bindable]
+			[Embed("assets/male.jpg")]
+			private var male :Class;
+			
+			[Bindable]
+			[Embed("assets/female.jpg")]
+			private var female :Class;
+			
+			[Bindable]
+			private var contact :Contact;
+			
+			override public function set data(value :Object) :void
+			{
+				if (value != null)
+				{
+					super.data = value;
+					contact = Contact(value);
+				}
+			}
+		]]>
+	</fx:Script>
+	
+	<s:states>
+		<s:State name="normal" />
+		<s:State name="hovered" />
+	</s:states>
+	
+	<s:Rect width="100%" height="100%">
+		<s:fill>
+			<s:SolidColor color="0x6699cc" alpha="0" alpha.hovered="0.3" />
+		</s:fill>
+	</s:Rect>
+	
+	<s:HGroup width="100%" height="100%" verticalAlign="middle">
+		<s:BitmapImage source="{contact.sex == 'Male' ? male : female}" height="60" width="60" />
+		<!-- EXERCISE: Add a VGroup with labels for name and number here -->
+	</s:HGroup>
+</s:ItemRenderer>

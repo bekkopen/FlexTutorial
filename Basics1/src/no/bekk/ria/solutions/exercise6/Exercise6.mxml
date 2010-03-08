@@ -16,7 +16,7 @@
 			import mx.core.IUIComponent;
 			import mx.events.DragEvent;
 			import mx.managers.DragManager;
-			import no.bekk.ria.ContactItemRenderer;
+			import no.bekk.ria.solutions.ContactItemRenderer;
 			
 			[Bindable]
 			private var favorites :ArrayCollection = new ArrayCollection();
@@ -73,7 +73,7 @@
 	
 	<s:HGroup width="100%" height="100%">
 		<s:Panel width="100%" height="100%" title="Contacts">
-			<s:List id="contactList" dataProvider="{contacts}" itemRenderer="no.bekk.ria.ContactItemRenderer" width="100%" height="100%" />
+			<s:List id="contactList" dataProvider="{contacts}" itemRenderer="no.bekk.ria.solutions.ContactItemRenderer" width="100%" height="100%" />
 		</s:Panel>
 		
 		<s:Panel width="100%" height="100%" title="New contact">

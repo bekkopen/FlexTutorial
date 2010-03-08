@@ -4,9 +4,7 @@
 			   xmlns:mx="library://ns.adobe.com/flex/halo" minWidth="1024" minHeight="768">
 	
 	<s:HGroup width="100%" height="100%">
-		<s:Panel width="100%" height="100%" title="Contacts">
-			<s:List width="100%" height="100%"/>
-		</s:Panel>
+		<!-- EXERCISE: Add a panel and a list with the panel here -->
 		
 		<s:Panel width="100%" height="100%" title="New contact">
 			<s:VGroup width="100%" height="100%" horizontalAlign="center" paddingTop="10">

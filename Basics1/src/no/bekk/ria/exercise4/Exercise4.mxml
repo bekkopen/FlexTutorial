@@ -23,11 +23,7 @@
 				
 				if (name != null && number != null && sex != null)
 				{
-					var contact :Contact = new Contact();
-					contact.name = name;
-					contact.number = number;
-					contact.sex = sex;
-					contacts.addItem(contact);
+					// EXERCISE: Create a new contact, set the fields, and add it to the 'contacts' ArrayCollection
 				}
 			}
 		]]>
@@ -35,7 +31,7 @@
 	
 	<s:HGroup width="100%" height="100%">
 		<s:Panel width="100%" height="100%" title="Contacts">
-			<s:List dataProvider="{contacts}" itemRenderer="no.bekk.ria.ContactItemRenderer" width="100%" height="100%"/>
+			<s:List dataProvider="{contacts}" itemRenderer="no.bekk.ria.solutions.ContactItemRenderer" width="100%" height="100%"/>
 		</s:Panel>
 		
 		<s:Panel width="100%" height="100%" title="New contact">
@@ -58,7 +54,7 @@
 					</s:DropDownList>
 				</s:HGroup>
 				<s:HGroup verticalAlign="middle" height="70">
-					<s:Button label="Save" click="saveContact(event)"/>
+					<s:Button label="Save" /><!-- EXERCISE: Set saveContact(event) as the click event handler -->
 				</s:HGroup>
 			</s:VGroup>
 		</s:Panel>
