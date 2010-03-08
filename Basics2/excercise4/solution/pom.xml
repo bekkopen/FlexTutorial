@@ -8,10 +8,19 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>swf</packaging>
 
+    <properties>
+        <flex.version>3.5.0.12683</flex.version>
+    </properties>
 
-    <build>
+
+    <build>                                                                                                     
         <sourceDirectory>src/main/flex</sourceDirectory>
         <testSourceDirectory>src/test/flex</testSourceDirectory>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.sonatype.flexmojos</groupId>
@@ -19,13 +28,13 @@
                 <version>3.5.0</version>
                 <extensions>true</extensions>
                 <configuration>
-                    <sourceFile>Basics2Excercise4Solution.mxml</sourceFile>
+                    <configurationReport>true</configurationReport>
                 </configuration>
                 <dependencies>
                     <dependency>
                         <groupId>com.adobe.flex</groupId>
                         <artifactId>compiler</artifactId>
-                        <version>4.0.0.8811</version>
+                        <version>${flex.version}</version>
                         <type>pom</type>
                     </dependency>
                 </dependencies>
@@ -37,7 +46,7 @@
         <dependency>
             <groupId>com.adobe.flex.framework</groupId>
             <artifactId>flex-framework</artifactId>
-            <version>4.0.0.8811</version>
+            <version>${flex.version}</version>
             <type>pom</type>
         </dependency>
 
@@ -48,8 +57,9 @@
             <type>swc</type>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
-    
+
     <!-- REPOS -->
     <repositories>
         <repository>
@@ -61,13 +71,6 @@
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
-        </repository>
-        <repository>
-            <id>spring-as3commons</id>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <url>http://dev.yoolab.org/maven/content/repositories/releases</url>
         </repository>
     </repositories>
     <pluginRepositories>
