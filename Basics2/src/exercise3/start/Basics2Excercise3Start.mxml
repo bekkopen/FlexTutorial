@@ -3,7 +3,7 @@
 	xmlns:mx="http://www.adobe.com/2006/mxml"
 	width="550" height="400"
     horizontalScrollPolicy="off"
-    xmlns:views="views.*"
+    xmlns:views="exercise3.start.views.*"
     horizontalAlign="center"
 	>
 

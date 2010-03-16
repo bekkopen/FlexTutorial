@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" 
 	width="550" height="400"
-	xmlns:local="*">
+	xmlns:local="exercise2.start.*">
 	
 	<!-- Define one view state, in addition to the base state.-->
   

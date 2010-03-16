@@ -4,7 +4,7 @@
                 horizontalScrollPolicy="off"
                 xmlns:views="views.*"
                 horizontalAlign="center"
-        		xmlns:boxes="views.boxes.*">
+        		xmlns:boxes="exercise5.start.views.boxes.*">
 
 	<mx:Panel title="Congratulations you're logged in!" width="100%" height="100%">
 
