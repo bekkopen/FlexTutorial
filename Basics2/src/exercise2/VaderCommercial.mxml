@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <mx:VBox xmlns:mx="http://www.adobe.com/2006/mxml" backgroundColor="white">
-	<mx:Image source="@Embed('darth-vader.gif')" height="320" width="226"/>
+	<mx:Image source="@Embed('assets/darth-vader.gif')" height="320" width="226"/>
 	<mx:Label text="Join the Empire. Now!" fontWeight="bold"/>
 </mx:VBox>
