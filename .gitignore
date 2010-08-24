@@ -1,8 +1,6 @@
-.*
 *.ipr
 *.iws
 target
-!.gitignore
 bin-debug
 html-template
 *.iml

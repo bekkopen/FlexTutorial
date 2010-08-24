@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<actionScriptProperties mainApplicationPath="exercise5/start/Basics2Excercise5.mxml" projectUUID="7c0a9e6f-f1b6-4ed9-9556-27a0c08c5276" version="6">
+  <compiler additionalCompilerArguments="-locale en_US" autoRSLOrdering="true" copyDependentFiles="true" generateAccessible="false" htmlExpressInstall="true" htmlGenerate="true" htmlHistoryManagement="true" htmlPlayerVersionCheck="true" includeNetmonSwc="false" outputFolderPath="bin-debug" sourceFolderPath="src" strict="true" targetPlayerVersion="0.0.0" useApolloConfig="false" useDebugRSLSwfs="true" verifyDigests="true" warn="true">
+    <compilerSourcePath/>
+    <libraryPath defaultLinkType="1">
+      <libraryPathEntry kind="4" path="">
+        <excludedEntries>
+          <libraryPathEntry kind="3" linkType="1" path="${PROJECT_FRAMEWORKS}/libs/flex.swc" useDefaultLinkType="false"/>
+        </excludedEntries>
+      </libraryPathEntry>
+      <libraryPathEntry kind="1" linkType="1" path="libs"/>
+    </libraryPath>
+    <sourceAttachmentPath/>
+  </compiler>
+  <applications>
+    <application path="exercise5/start/Basics2Excercise5.mxml"/>
+    <application path="exercise5/solution/Basics2Excercise5Solution.mxml"/>
+    <application path="exercise4/start/Basics2Excercise4Start.mxml"/>
+    <application path="exercise4/solution/Basics2Excercise4Solution.mxml"/>
+    <application path="exercise3/start/Basics2Excercise3Start.mxml"/>
+    <application path="exercise3/solution/Basics2Excercise3Solution.mxml"/>
+    <application path="exercise2/start/Basics2Excercise2Solution.mxml"/>
+    <application path="exercise2/start/VaderCommercial.mxml"/>
+    <application path="exercise2/solution/VaderCommercial.mxml"/>
+    <application path="exercise2/solution/Basics2Excercise2Solution.mxml"/>
+    <application path="exercise1/solution/Basics2Excercise1Solution.mxml"/>
+    <application path="exercise1/start/Basics2Excercise1.mxml"/>
+  </applications>
+  <modules/>
+  <buildCSSFiles/>
+</actionScriptProperties>
+
