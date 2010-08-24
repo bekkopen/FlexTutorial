@@ -6,3 +6,4 @@ html-template
 *.iml
 out
 *_main_class_config.xml
+.idea
