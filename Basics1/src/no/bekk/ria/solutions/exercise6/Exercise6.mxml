@@ -16,6 +16,7 @@
 			import mx.core.IUIComponent;
 			import mx.events.DragEvent;
 			import mx.managers.DragManager;
+			
 			import no.bekk.ria.solutions.ContactItemRenderer;
 			
 			[Bindable]
@@ -66,7 +67,8 @@
 			
 			private function dropHandler(e :DragEvent) :void
 			{
-				List(e.currentTarget).dataProvider.addItem(ContactItemRenderer(e.dragInitiator).data);
+				var contact :Contact = ContactItemRenderer(e.dragInitiator).data as Contact;
+				List(e.currentTarget).dataProvider.addItem(contact);
 			}
 		]]>
 	</fx:Script>

@@ -14,7 +14,19 @@
   </compiler>
   <applications>
     <application path="no/bekk/ria/exercise1/Exercise1.mxml"/>
+    <application path="no/bekk/ria/exercise2/Exercise2.mxml"/>
+    <application path="no/bekk/ria/exercise3/Exercise3.mxml"/>
+    <application path="no/bekk/ria/exercise4/Exercise4.mxml"/>
+    <application path="no/bekk/ria/exercise5/Exercise5.mxml"/>
+    <application path="no/bekk/ria/exercise6/Exercise6.mxml"/>
+    <application path="no/bekk/ria/solutions/exercise1/Exercise1.mxml"/>
+    <application path="no/bekk/ria/solutions/exercise2/Exercise2.mxml"/>
+    <application path="no/bekk/ria/solutions/exercise3/Exercise3.mxml"/>
+    <application path="no/bekk/ria/solutions/exercise4/Exercise4.mxml"/>
+    <application path="no/bekk/ria/solutions/exercise5/Exercise5.mxml"/>
+    <application path="no/bekk/ria/solutions/exercise6/Exercise6.mxml"/>
   </applications>
   <modules/>
   <buildCSSFiles/>
 </actionScriptProperties>
+
